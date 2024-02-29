@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Administracion", "Administracion.csproj", "{9BC9FE34-936F-4F93-A665-FE23B59ADA90}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapaModelo", "..\DB\CapaModelo.csproj", "{07AEA30E-9A3D-42FD-B256-92E919BF6010}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BC9FE34-936F-4F93-A665-FE23B59ADA90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BC9FE34-936F-4F93-A665-FE23B59ADA90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BC9FE34-936F-4F93-A665-FE23B59ADA90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BC9FE34-936F-4F93-A665-FE23B59ADA90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07AEA30E-9A3D-42FD-B256-92E919BF6010}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07AEA30E-9A3D-42FD-B256-92E919BF6010}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07AEA30E-9A3D-42FD-B256-92E919BF6010}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07AEA30E-9A3D-42FD-B256-92E919BF6010}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF0E6060-6822-4924-9F26-C25AC47B57EA}
+	EndGlobalSection
+EndGlobal
