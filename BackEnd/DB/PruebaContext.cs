@@ -10,9 +10,14 @@ namespace CapaModelo
         public DbSet<User> Users { get; set;}
         protected override void OnModelCreating (ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>().ToTable("User");
-            modelBuilder.Entity<Departamento>().ToTable("Departamento");
-            modelBuilder.Entity<Cargo>().ToTable("Cargo");
+            base.OnModelCreating (modelBuilder);
+
+            modelBuilder.Entity<User>().ToTable("User").HasKey(u => u.Id);
+            modelBuilder.Entity<User>().ToTable("User").Property(u => u.Id).ValueGeneratedOnAdd();
+            modelBuilder.Entity<Departamento>().ToTable("Departamento").HasKey(u => u.Id);
+            modelBuilder.Entity<Departamento>().ToTable("Departamento").Property(u => u.Id).ValueGeneratedOnAdd();
+            modelBuilder.Entity<Cargo>().ToTable("Cargo").HasKey(u => u.Id);
+            modelBuilder.Entity<Cargo>().ToTable("Cargo").Property(u => u.Id).ValueGeneratedOnAdd();
 
             // Seed data
             modelBuilder.Entity<Departamento>().HasData(

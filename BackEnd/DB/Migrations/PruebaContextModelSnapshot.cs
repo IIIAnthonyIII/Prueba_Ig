@@ -117,11 +117,17 @@ namespace CapaModelo.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("IdCargo")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CargoId")
                         .HasColumnType("int");
 
-                    b.Property<int>("IdDepartamento")
+                    b.Property<int>("DepartamentoId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PrimerApellido")
                         .IsRequired()
@@ -145,26 +151,40 @@ namespace CapaModelo.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CargoId");
+
+                    b.HasIndex("DepartamentoId");
+
                     b.ToTable("User", (string)null);
                 });
 
             modelBuilder.Entity("CapaModelo.User", b =>
                 {
                     b.HasOne("CapaModelo.Cargo", "Cargo")
-                        .WithMany()
-                        .HasForeignKey("Id")
+                        .WithMany("Users")
+                        .HasForeignKey("CargoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("CapaModelo.Departamento", "Departamento")
-                        .WithMany()
-                        .HasForeignKey("Id")
+                        .WithMany("Users")
+                        .HasForeignKey("DepartamentoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Cargo");
 
                     b.Navigation("Departamento");
+                });
+
+            modelBuilder.Entity("CapaModelo.Cargo", b =>
+                {
+                    b.Navigation("Users");
+                });
+
+            modelBuilder.Entity("CapaModelo.Departamento", b =>
+                {
+                    b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
         }

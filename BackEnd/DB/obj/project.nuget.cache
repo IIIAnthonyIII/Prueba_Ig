@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O7iBA0MRa/Wjgnuw33QPxuiIpmrXFMU1AkhfuSYAAzqTnsBMTs5MiSQF7lm/Ai3zmHr6uFeysgz2XccWWqQu1Q==",
+  "dgSpecHash": "/BcM+R1POBtfPczRy4iofpmJxhXkOAv8vlUTswTgShOAzgJZhWlp03mDs0CtekbgFwNQOF+Uj/nhi5n9k5uisg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\DB\\CapaModelo.csproj",
+  "projectFilePath": "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\BackEnd\\DB\\CapaModelo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aptdr\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\aptdr\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

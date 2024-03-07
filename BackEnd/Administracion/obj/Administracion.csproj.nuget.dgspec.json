@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\Administracion\\Administracion.csproj": {}
+    "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\BackEnd\\Administracion\\Administracion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\Administracion\\Administracion.csproj": {
+    "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\BackEnd\\Administracion\\Administracion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\Administracion\\Administracion.csproj",
+        "projectUniqueName": "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\BackEnd\\Administracion\\Administracion.csproj",
         "projectName": "Administracion",
-        "projectPath": "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\Administracion\\Administracion.csproj",
+        "projectPath": "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\BackEnd\\Administracion\\Administracion.csproj",
         "packagesPath": "C:\\Users\\aptdr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\Administracion\\obj\\",
+        "outputPath": "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\BackEnd\\Administracion\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aptdr\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\DB\\CapaModelo.csproj": {
-                "projectPath": "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\DB\\CapaModelo.csproj"
+              "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\BackEnd\\DB\\CapaModelo.csproj": {
+                "projectPath": "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\BackEnd\\DB\\CapaModelo.csproj"
               }
             }
           }
@@ -94,14 +94,14 @@
         }
       }
     },
-    "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\DB\\CapaModelo.csproj": {
+    "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\BackEnd\\DB\\CapaModelo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\DB\\CapaModelo.csproj",
+        "projectUniqueName": "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\BackEnd\\DB\\CapaModelo.csproj",
         "projectName": "CapaModelo",
-        "projectPath": "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\DB\\CapaModelo.csproj",
+        "projectPath": "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\BackEnd\\DB\\CapaModelo.csproj",
         "packagesPath": "C:\\Users\\aptdr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\DB\\obj\\",
+        "outputPath": "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\BackEnd\\DB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aptdr\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,20 +1,64 @@
 <div>
+  <p>Módulo de administración</p>
+  <h3>Administración de usuarios</h3>
+  <div style="display: flex; width: 100%;">
+    <div style="width: 50%;">
+      <mat-form-field>
+      <mat-label>Seleccione un departamento</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let departamento of dataDepartamento" [value]="departamento.id">
+          {{ departamento.nombre }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Seleccione un cargo</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let cargo of dataCargo" [value]="cargo.id">
+          {{ cargo.nombre }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    </div>
+    <div style="display: flex; justify-content: flex-end; width: 50%; margin-top: 1%;">
+      <button mat-stroked-button (click)="openDialogCreate()">Crear nuevo usuario</button>
+    </div>
+  </div>
   <table mat-table [dataSource]="data" class="mat-elevation-z8">
-    <ng-container *ngFor="let col of displayedColumns" [matColumnDef]="col">
-      <th mat-header-cell *matHeaderCellDef>{{ col | titlecase }}</th>
-      <td mat-cell *matCellDef="let element">{{ element[col] }}</td>
+    <ng-container matColumnDef="Usuario">
+      <th mat-header-cell *matHeaderCellDef> Usuario </th>
+      <td mat-cell *matCellDef="let element"> {{element.usuario}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Nombre">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.primerNombre}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Apellido">
+      <th mat-header-cell *matHeaderCellDef> Apellido </th>
+      <td mat-cell *matCellDef="let element"> {{element.primerApellido}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Departamento">
+      <th mat-header-cell *matHeaderCellDef> Departamento </th>
+      <td mat-cell *matCellDef="let element"> {{element.departamento.nombre}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Cargo">
+      <th mat-header-cell *matHeaderCellDef> Cargo </th>
+      <td mat-cell *matCellDef="let element"> {{element.cargo.nombre}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Email">
+      <th mat-header-cell *matHeaderCellDef> Email </th>
+      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
     </ng-container>
     <ng-container matColumnDef="acciones">
       <th mat-header-cell *matHeaderCellDef>Acciones</th>
       <td mat-cell *matCellDef="let element">
-        <button mat-icon-button class="custom-green" aria-label="Editar" (click)="mostrarMensaje()">
-          <mat-icon>edit</mat-icon>
-          <span>Editar</span>
+        <button mat-button class="custom-green" (click)="openDialogUpdate(element.id)">
+          <fa-icon [icon]="faPenToSquare"></fa-icon>
+          Editar
         </button>
-
-        <button mat-icon-button class="custom-red" aria-label="Eliminar" (click)="mostrarMensaje()">
-          <mat-icon>delete</mat-icon>
-          <span>Eliminar</span>
+        <button mat-button class="custom-red" (click)="openDialogDelete(element.id)">
+          <fa-icon [icon]="faTrash"></fa-icon>
+          Eliminar
         </button>
       </td>
     </ng-container>
@@ -23,7 +67,7 @@
       *matHeaderRowDef="displayedColumns.concat('acciones')"
     ></tr>
     <tr
-      mat-row
+      mat-row 
       *matRowDef="let row; columns: displayedColumns.concat('acciones')"
     ></tr>
   </table>

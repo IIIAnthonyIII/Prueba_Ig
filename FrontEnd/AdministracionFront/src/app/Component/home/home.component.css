@@ -1,18 +1,14 @@
-div{
-    margin-top: 20px;
-    width: 97%;
-    margin: 0 auto;
+div {
+  margin-top: 20px;
+  width: 97%;
+  margin: 0 auto;
 }
 .custom-green {
-  color: green !important; 
+  background: white;
+  color: green !important;
 }
 
 .custom-red {
+  background: white;
   color: red !important;
-}
-
-.mat-icon-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

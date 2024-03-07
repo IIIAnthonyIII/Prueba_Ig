@@ -44,27 +44,29 @@ namespace CapaModelo.Migrations
                 name: "User",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Usuario = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PrimerNombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SegundoNombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PrimerApellido = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SegundoApellido = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IdDepartamento = table.Column<int>(type: "int", nullable: false),
-                    IdCargo = table.Column<int>(type: "int", nullable: false)
+                    DepartamentoId = table.Column<int>(type: "int", nullable: false),
+                    CargoId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_User", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_User_Cargo_Id",
-                        column: x => x.Id,
+                        name: "FK_User_Cargo_CargoId",
+                        column: x => x.CargoId,
                         principalTable: "Cargo",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_User_Departamento_Id",
-                        column: x => x.Id,
+                        name: "FK_User_Departamento_DepartamentoId",
+                        column: x => x.DepartamentoId,
                         principalTable: "Departamento",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -87,6 +89,16 @@ namespace CapaModelo.Migrations
                     { 1, true, "34as", 1, "Logistica" },
                     { 2, true, "676d", 2, "Laboratorio" }
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_User_CargoId",
+                table: "User",
+                column: "CargoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_User_DepartamentoId",
+                table: "User",
+                column: "DepartamentoId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

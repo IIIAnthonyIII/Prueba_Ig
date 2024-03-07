@@ -1,0 +1,57 @@
+<h3>Editar Usuario</h3>
+<form (ngSubmit)="submitForm($event)" class="form-container">
+  <div class="form-column">
+    <mat-form-field>
+        <mat-label>Departamento</mat-label>
+        <mat-select [(ngModel)]="user.departamentoId" name="idDepartamento" required>
+          <mat-option *ngFor="let departamento of dataDepartamento" [value]="departamento.id">
+            {{ departamento.nombre }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    <mat-form-field>
+      <label>Usuario</label>
+      <input matInput [(ngModel)]="user.usuario" name="usuario" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <label>Primer Nombre</label>
+      <input matInput [(ngModel)]="user.primerNombre" name="primerNombre" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <label>Primer Apellido</label>
+        <input matInput [(ngModel)]="user.primerApellido" name="primerApellido" required>
+      </mat-form-field>
+  </div>
+
+  <div class="form-column">
+    <mat-form-field>
+        <mat-label>Cargo</mat-label>
+        <mat-select [(ngModel)]="user.cargoId" name="idCargo" required>
+          <mat-option *ngFor="let cargo of dataCargo" [value]="cargo.id">
+            {{ cargo.nombre }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    <mat-form-field>
+      <label>Email</label>
+      <input matInput [(ngModel)]="user.email" name="email" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <label>Segundo Nombre</label>
+        <input matInput [(ngModel)]="user.segundoNombre" name="segundoNombre" required>
+      </mat-form-field>
+
+    <mat-form-field>
+      <label>Segundo Apellido</label>
+      <input matInput [(ngModel)]="user.segundoApellido" name="segundoApellido" required>
+    </mat-form-field>
+    <div class="button-container">
+        <button mat-raised-button color="primary" type="submit">Registrar</button>
+        <button mat-stroked-button color="primary" type="button" (click)="onNoClick()">Cancelar</button>
+    </div>
+  </div>
+</form>

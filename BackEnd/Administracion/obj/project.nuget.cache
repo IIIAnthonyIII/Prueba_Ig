@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/0QFq45gLAj0fjj9z2hupihN5RU5Up6ijj1NI/dJe1h0S7mTXaeVPb6zffNP3ldZg9syprSYMroYFlBuzudkeA==",
+  "dgSpecHash": "OSOjSBw7jwy97/L6WyAaE+NDCJmMCjSyw92h38rYGtc0yx1Tc9gdIRWzeIf0KT3drMZIeazK6Y/2TZWDZPf1eQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\Administracion\\Administracion.csproj",
+  "projectFilePath": "C:\\Users\\aptdr\\Documents\\My_Projects\\Prueba_Ig\\BackEnd\\Administracion\\Administracion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aptdr\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\aptdr\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
